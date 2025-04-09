@@ -16,47 +16,50 @@ The **admin-server** provides a beautiful UI dashboard to visualize health statu
 
 ## Getting Started
 
-1. **Clone the Repository:**
+1.  **Clone the Repository:**
 
-   ```bash
-    git clone https://github.com/abijith-suresh/admin-server.git
-   ```
+    ```bash
+    git clone [https://github.com/abijith-suresh/admin-server.git](https://github.com/abijith-suresh/admin-server.git)
+    ```
 
-2. **Navigate to the project:**
+2.  **Navigate to the project:**
 
-   ```bash
+    ```bash
     cd admin-server
-   ```
+    ```
 
-3. **Configuring Clients:**
-   To allow your microservices to be monitored, add the following to each service: 
+3.  **Configuring Clients:**
+
+    To allow your microservices to be monitored, add the following to each service:
 
     **Dependencies**
+
     ```kotlin
     implementation("de.codecentric:spring-boot-admin-starter-client")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     ```
-   
-   **Configuration**
-   ```yaml
-   spring:
-   boot:
-    admin:
-      client:
-        url: http://localhost:9090
 
-   management:
+    **Configuration**
+
+    ```yaml
+    spring:
+      boot:
+        admin:
+          client:
+            url: http://localhost:9090
+
+    management:
       endpoints:
         web:
-         exposure:
-           include: "*"
-   ```
+          exposure:
+            include: "*"
+    ```
 
-4. **Run the application:**
+4.  **Run the application:**
 
     ```bash
     ./gradlew bootRun
-   ```
+    ```
 
 ## License
 
