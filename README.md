@@ -19,7 +19,7 @@ The **admin-server** provides a beautiful UI dashboard to visualize health statu
 1.  **Clone the Repository:**
 
     ```bash
-    git clone [https://github.com/abijith-suresh/admin-server.git](https://github.com/abijith-suresh/admin-server.git)
+    git clone https://github.com/abijith-suresh/admin-server.git
     ```
 
 2.  **Navigate to the project:**
