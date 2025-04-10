@@ -8,6 +8,12 @@ spring:
   boot:
     admin:
       context-path: /
+      discovery:
+        enabled: true
+        instance-auth:
+          default:
+            username: ${ACTUATOR_USERNAME:admin}
+            password: ${ACTUATOR_PASSWORD:admin}
 
   management:
     endpoints:
@@ -28,4 +34,3 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    appname: admin-server
